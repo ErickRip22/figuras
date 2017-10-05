@@ -3,7 +3,6 @@ Jared
 Erick Raul Ibarra Perez 
 '''
 import unittest
-import math
 from fig import Figuras
 
 
