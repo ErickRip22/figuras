@@ -14,7 +14,8 @@ def dado_que_ingreso_el_lado_group1(step, lado):
 @step(u'entonces obtengo el area "([^"]*)"')
 def entonces_obtengo_el_area_group1(step, esperado):
     obtenido =  world.figs.get_area()
-    assert float(esperado) == obtenido, 'El resultado esperado es' + esperado + ' y el obtenido es ' + obtenido
+    assert float(esperado) == obtenido, 'El resultado esperado es' + esperado 
+        + ' y el obtenido es ' + obtenido
 
 @step(u'Dado que ingreso los lados "([^"]*)" por "([^"]*)"')
 def dado_que_ingreso_los_lados_group1_por_group2(step, num1, num2):
@@ -24,7 +25,8 @@ def dado_que_ingreso_los_lados_group1_por_group2(step, num1, num2):
 def dado_que_ingreso_el_radio_group1(step, radio):
 	world.figs = Figuras()
 	world.figs.calcular_area_circulo(int(radio))
-@step(u'Dado que ingreso la base menor "([^"]*)", base mayor "([^"]*)" y altura "([^"]*)"')
-def dado_que_ingreso_la_base_menor_group1_base_mayor_group2_y_altura_group3(step, basema, baseme, altura):
+@step(u'Dado que ingreso la base menor "([^"]*)", base mayor "([^"]*)" y altura "([^"]*)"') # noqa: E731
+def dado_que_ingreso_la_base_menor_group1_base_mayor_group2_y_altura_group3(step, 
+        basema, baseme, altura):
 	world.figs = Figuras()
 	world.figs.calcular_area_trapecio(float(altura), float(basema), float(baseme))
